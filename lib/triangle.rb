@@ -8,10 +8,13 @@ class Triangle
   end
 
   def kind
-    
+    sides = [@side_one, @side_two, @side_three]
+    if sides.uniq.size == 1
+      :equilateral
+    end
   end
 end
 
 class TriangleError < StandardError
-  
+
 end
