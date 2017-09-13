@@ -17,6 +17,13 @@ class Triangle
       begin
         raise TriangleError
       end
+    elsif
+      s = sides.sort
+      if s[0] + s[1] <= s[2]
+        begin
+          raise TriangleError
+        end
+      end
     else
       if sides.uniq.size == 1
         :equilateral
