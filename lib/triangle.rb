@@ -13,6 +13,10 @@ class Triangle
       begin
         raise TriangleError
       end
+    elsif sides.select {|n| n < 0 }.count > 0
+      begin
+        raise TriangleError
+      end      
     else
       if sides.uniq.size == 1
         :equilateral
