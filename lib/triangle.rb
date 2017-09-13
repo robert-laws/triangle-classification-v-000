@@ -9,7 +9,7 @@ class Triangle
 
   def kind
     sides = [@side_one, @side_two, @side_three]
-    if.sides.include?(0)
+    if sides.include?(0)
       begin
         raise TriangleError
       end
@@ -21,7 +21,7 @@ class Triangle
       elsif sides.uniq.size == 3
         :scalene
       end
-    end  
+    end
   end
 end
 
