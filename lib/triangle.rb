@@ -19,9 +19,8 @@ class Triangle
         raise TriangleError
       end
     elsif sides[0] + sides[1] <= sides[2]
-        begin
-          raise TriangleError
-        end
+      begin
+        raise TriangleError
       end
     else
       if sides.uniq.size == 1
