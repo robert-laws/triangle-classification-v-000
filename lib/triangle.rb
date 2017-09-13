@@ -13,14 +13,15 @@ class Triangle
       begin
         raise TriangleError
       end
-    end
-    if sides.uniq.size == 1
-      :equilateral
-    elsif sides.uniq.size == 2
-      :isosceles
-    elsif sides.uniq.size == 3
-      :scalene
-    end
+    else
+      if sides.uniq.size == 1
+        :equilateral
+      elsif sides.uniq.size == 2
+        :isosceles
+      elsif sides.uniq.size == 3
+        :scalene
+      end
+    end  
   end
 end
 
