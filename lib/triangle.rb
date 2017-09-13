@@ -9,6 +9,7 @@ class Triangle
 
   def kind
     sides = [@side_one, @side_two, @side_three]
+    sides.sort!
     if sides.include?(0)
       begin
         raise TriangleError
@@ -17,9 +18,7 @@ class Triangle
       begin
         raise TriangleError
       end
-    elsif
-      s = sides.sort
-      if s[0] + s[1] <= s[2]
+    elsif sides[0] + sides[1] <= sides[2]
         begin
           raise TriangleError
         end
