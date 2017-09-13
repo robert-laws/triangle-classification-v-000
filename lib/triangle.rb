@@ -13,6 +13,8 @@ class Triangle
       :equilateral
     elsif sides.uniq.size == 2
       :isosceles
+    elsif sides.uniq.size == 3
+      :scalene
     end
   end
 end
