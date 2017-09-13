@@ -11,6 +11,8 @@ class Triangle
     sides = [@side_one, @side_two, @side_three]
     if sides.uniq.size == 1
       :equilateral
+    elsif sides.uniq.size == 2
+      :isosceles
     end
   end
 end
